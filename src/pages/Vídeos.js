@@ -22,7 +22,7 @@ function Vídeos() {
         ref={videoRef}
         onClick={handdleStart}
         loop
-        src="https://firebasestorage.googleapis.com/v0/b/jornada-b5e9d.appspot.com/o/brecker2.mp4?alt=media&token=9aa979e9-0907-4093-abd5-a71efe4fc946"
+        src="https://poqlymuephttfsljdabn.supabase.co/storage/v1/object/public/jornadadev/brecker2.mp4"
       ></video>
     </div>
   );
