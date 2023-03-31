@@ -1,0 +1,57 @@
+.videoFooter {
+    position: relative;
+    bottom: 20%;
+    color: white;
+    margin-left: 30px;
+}
+
+.videoFooterText h3 {
+    padding-bottom: 20px;
+
+}
+
+.videoFooterText p {
+    padding-bottom: 20px;
+    
+}
+
+.videoFooterMusic {
+    display: flex;
+
+}
+
+.videoFooterMusicText {
+    width: 80%;
+    overflow-x: hidden;
+}
+
+.videoFooterMusicText p {
+    animation: moveTheText 3s infinite linear;
+}
+
+.videoFooterRecord {
+    animation: spinTheRecord 3s infinite linear;
+    position: absolute;
+    bottom: 5px;
+    right: 20px;
+    height: 50px;
+    filter: invert(1);
+}
+
+@keyframes spinTheRecord {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes moveTheText {
+    0% {
+        transform: translatex(100%);
+    }
+    100% {
+        transform: translatex(-100%);
+    }
+}
