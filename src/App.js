@@ -5,6 +5,11 @@ import db from "./config/firebase";
 import { collection, getDocs } from "firebase/firestore/lite";
 
 function App() {
+  let maxHeight;
+  if (window.innerHeight <= 800) {
+    maxHeight = window.innerHeight
+  }
+
   const [video, setVideos] = useState([]);
 
   async function getVideos() {
@@ -19,7 +24,7 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <div className="App" style={{ maxHeight: maxHeight + "px" }}>
       <div className="appVideos">
         {video.map((item) => {
           return (
@@ -34,17 +39,6 @@ function App() {
             />
           );
         })}
-
-        {/* <Vídeo 
-          likes={1}
-          messages={2}
-          shares={3}
-          name="Mayra"
-          description="Gatinho seguindo o dedo"
-          music="Não sei"
-          url="https://firebasestorage.googleapis.com/v0/b/jornada-dev.appspot.com/o/bird.mp4?alt=media&token=52abbeec-ff95-4acb-808e-5a4b4977d1da"
-
-        /> */}
       </div>
     </div>
   );
